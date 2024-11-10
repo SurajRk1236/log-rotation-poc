@@ -1,0 +1,24 @@
+{
+  "services": [
+    {
+      "name": "kafka",
+      "log_dir": "/var/log/kafka",
+      "archive_dir": "/var/log/kafka/archive",
+      "cron_schedule": "0 0 * * *",
+      "max_size_mb": 100,
+      "retain_count": 7,
+      "file_naming": "timestamp",
+      "compression": "gzip"
+    },
+    {
+      "name": "zookeeper",
+      "log_dir": "/var/log/zookeeper",
+      "archive_dir": "/var/log/zookeeper/archive",
+      "cron_schedule": "0 0 * * 0",
+      "max_size_mb": 50,
+      "retain_count": 5,
+      "file_naming": "numbered",
+      "compression": "bzip2"
+    }
+  ]
+}
